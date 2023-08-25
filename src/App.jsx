@@ -4,9 +4,11 @@ import { Footer } from "./Footer";
 
 function App() {
   return (
-    <div>
+    <div className="flex min-h screen flex-col">
       <Header />
-      <Content />
+      <div className="container mx-auto py-2">
+        <Content />
+      </div>
       <Footer />
     </div>
   );

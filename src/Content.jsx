@@ -23,12 +23,18 @@ export function Content() {
   //   setIsArticlesShowVisible(false);
   // };
 
-  useEffect(handleArticlesIndex, []);
+  useEffect(handleArticlesIndex, [searchTerm]);
   return (
     <div>
       <h1>Welcome to the News!</h1>
       <div>
-        Search: <input type="text" value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} />
+        Search:{" "}
+        <input
+          className="border-solid border-2 border-sky-500"
+          type="text"
+          value={searchTerm}
+          onChange={(event) => setSearchTerm(event.target.value)}
+        />
         <button onClick={handleArticlesIndex}>Search</button>
       </div>
       <ArticlesIndex articles={articles} />
